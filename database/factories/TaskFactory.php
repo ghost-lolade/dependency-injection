@@ -21,8 +21,11 @@ class TaskFactory extends Factory
      */
     public function definition()
     {
-        return [
-            //
-        ];
+        $factory->define(Task::class, function (Faker $faker) {
+            return [
+                'title' => $faker-paragraph,
+                'user_id' => 1
+            ];
+        });
     }
 }
